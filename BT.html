@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiem Tra So Nguyen To</title>
+</head>
+<body>
+
+<script>
+    let a = parseInt(prompt("import number"));
+    function isPrime(number) {
+        if (number < 2) {
+            return false;
+        }
+        for (let i = 2; i < (number - 1); i++) {
+            if (number % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+    let condition1 = isPrime(a);
+    if (condition1==true){
+        alert(a+" is prime");
+    }else {
+        alert(a+" is not prime");
+    }
+    let b = [];
+    for (let i=1;i<=10000;i++){
+        let condition2 = isPrime(i);
+        if (condition2==true){
+            b.push(i);
+        }
+    }
+    console.log(b);
+</script>
+</body>
+</html>
